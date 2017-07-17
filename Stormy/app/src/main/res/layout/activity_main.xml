@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:background="@drawable/gb_gradiend"
+    android:id="@+id/RefreshImageView"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:id="@+id/Temperaturelabel"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="150sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ImageViewDegreeSymbol"
+        android:src="@drawable/degree"
+        android:paddingTop="50dp"
+        android:background="@drawable/abc_btn_borderless_material"
+        android:layout_alignBottom="@+id/Temperaturelabel"
+        android:layout_toRightOf="@+id/Temperaturelabel"
+        android:layout_toEndOf="@+id/Temperaturelabel"
+        android:layout_marginBottom="131dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" At 8:pm will be"
+        android:id="@+id/TimeView"
+        android:layout_above="@+id/Temperaturelabel"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cape Girardeau,MO"
+        android:id="@+id/LocationLabel"
+        android:layout_above="@+id/ImageViewDegreeSymbol"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="60dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/background_light"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconImageView"
+        android:layout_alignTop="@+id/LocationLabel"
+        android:layout_toStartOf="@+id/LocationLabel"
+        android:src="@drawable/cloudy_night"
+        android:layout_toLeftOf="@+id/LocationLabel"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ImageViewDegreeSymbol"
+        android:layout_alignEnd="@+id/ImageViewDegreeSymbol"
+        android:layout_below="@+id/Temperaturelabel"
+        android:layout_alignLeft="@+id/iconImageView"
+        android:layout_alignStart="@+id/iconImageView"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HUMIDITY"
+                android:id="@+id/HumidityLabel"
+                android:textColor="#80ffffff"
+                android:layout_gravity="right"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-.--"
+                android:id="@+id/HumidityValue"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:paddingLeft="60dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rain/Snow"
+                android:id="@+id/PreciepLavel"
+                android:textColor="#50ffffff"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="---%"
+                android:id="@+id/PreciepLevel"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All is Well !"
+        android:id="@+id/Summery"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/linearLayout2"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/refresh"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_marginBottom="53dp"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOURLY"
+            android:id="@+id/hourlyButton"
+            android:textColor="@color/abc_input_method_navigation_guard"
+            android:layout_weight="2.24"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DailyButton"
+            android:layout_weight="2.94"
+            android:text="7 DAY"
+            android:textColor="@color/abc_primary_text_disable_only_material_light"/>
+    </LinearLayout>
+
+</RelativeLayout>

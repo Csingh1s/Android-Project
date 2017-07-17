@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:background="@drawable/gb_gradiend"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="12:00"
+        android:id="@+id/timelable"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:textSize="24sp"
+        tools:text="12 PM"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconImageView"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/timelable"
+        android:layout_toEndOf="@+id/timelable"
+        android:src="@drawable/partly_cloudy"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="100"
+        android:id="@+id/temperature"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Partly Cloudy"
+        android:id="@+id/summary"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iconImageView"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:layout_marginLeft="71dp"
+        android:layout_marginStart="71dp"
+        android:layout_alignParentRight="false"
+        android:layout_toLeftOf="@+id/temperature"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"/>
+
+</RelativeLayout>
